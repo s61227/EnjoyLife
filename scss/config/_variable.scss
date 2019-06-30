@@ -1,0 +1,36 @@
+/* ======= Variables ======= */
+// color 
+$white: #ffffff;
+$blue: #04a2a3;
+$red: #e4342a;
+$yellow: #ebac3e;
+$dark: #333;
+$gray-1: #666;
+$gray-2: #A8AAAB;
+$gray-3: #e0e0e0;
+$gray-4: #F2F2F2;
+
+// text color
+$text-primary: $dark;
+$text-secondary: $gray-1;
+
+// background color
+$bg-primary: $white;
+$bg-secondary: $gray-4;
+
+// font-family
+$font-style: 'Noto Sans TC', sans-serif;
+$font-style-EN: 'Noto Serif', serif;
+
+// font-weight
+$font-weight-light: 300;
+$font-weight-normal: normal;
+$font-weight-bold: 500;
+$font-weight-bolder: 700;
+
+// font-size
+$font-size-base: 16px;
+$font-size-sm: $font-size-base*0.75;
+$font-size-md: $font-size-base*1.125;
+$font-size-lg: $font-size-base*1.5;    
+

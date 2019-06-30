@@ -1,0 +1,109 @@
+@mixin input ($bgColor) {
+    border: none;
+    outline: none;
+    background-color: $bgColor;
+    padding-left: 15px;
+}
+@mixin select($bgColor, $textColor) {
+    border: none;
+    outline: none;
+    background-color: $bgColor;
+    padding:0 20px;
+    color:$textColor;
+    font-family: $font-style;
+    width: 100%;
+}
+@mixin checkbox-label($pl, $textSize, $textcolor){
+    padding-left: $pl;
+    font-size: $textSize;
+    color: $textcolor;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@mixin checkbox-input{
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+}
+@mixin checkbox-mark($sizeW, $sizeH, $bgColor){
+    height: $sizeH;
+    width: $sizeW;
+    background-color: $bgColor;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@mixin checkbox-mark-after($posL, $sizeW, $sizeH, $borderColor){
+    content: "";
+    display: none;
+    position: absolute;
+    left: $posL;
+    width: $sizeW;
+    height: $sizeH;
+    border: solid $borderColor;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* form、input、select */
+form{
+    background-color: $gray-4;
+    border-top: 8px solid #04a2a3;
+    @include mobile(){
+        height: auto;
+    }
+}
+.e-inputWrap{
+    margin: 0 30px 16px;
+    padding: 0 20px;
+    background-color: $white;
+    color: $blue;
+    font-size: $font-size-md;
+    display: flex;
+    height: 56px;
+    align-items: center;
+    border: 1px solid $blue;
+    i{
+        min-width: 20px;
+    }
+    input{
+        @include input($white);
+        width: 100%;
+        vertical-align: middle;
+        font-family: $font-style;
+        padding-left: 15px;
+        margin-bottom: 3px;
+    }
+    input::-webkit-input-placeholder{
+        color: $gray-2;
+        letter-spacing: 1px;
+    } 
+}
+.e-customCheckbox{
+    label{
+        margin-bottom: 12px;
+        @include checkbox-label(22px, $font-size-sm, $blue);
+        input {
+            @include checkbox-input;
+        }
+        .e-checkmark {
+            @include checkbox-mark(16px, 16px, $white);
+            border: 1px solid $blue;
+        }
+        .e-checkmark:after {
+            @include checkbox-mark-after(4px, 4px, 9px, $blue);
+        }
+    }
+    label input:checked ~ .e-checkmark:after {
+        display: inline-block;
+    }
+}

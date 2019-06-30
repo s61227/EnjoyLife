@@ -1,0 +1,15 @@
+.m-pagination{
+    text-align: right;
+    margin: 30px 0;
+    @include mobile(){
+        text-align: center;
+    }
+    span{
+        border: 1px solid $gray-3;
+        padding: 15px 20px;
+        &:hover{
+            background-color: $gray-3;
+            cursor: pointer;
+        }
+    }
+}

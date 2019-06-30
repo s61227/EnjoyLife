@@ -1,0 +1,71 @@
+/* card */
+.m-card{
+    border: 1px solid $gray-3;
+    box-shadow: 0 2px 8px 0 rgba(50, 50, 50, 0.08);
+    margin-bottom: 20px;
+    @include pad(){
+        margin-bottom: 30px;
+    }
+    &__img{
+        position: relative;
+        margin-bottom: 15px;
+        img{
+            @include fit-image(100%, 230px);
+        } 
+        &__tag{
+            position: absolute;
+            top:0;
+            left: 20px;
+            writing-mode: vertical-lr;
+            background-color: $blue; 
+            font-size: $font-size-base;
+            color: $white;
+            padding: 10px;
+            letter-spacing: 5.5px;
+        }
+        &__like{
+            position: absolute;
+            top:20px;
+            right: 22px;
+            cursor: pointer;
+            i{
+                color: $blue;
+                font-size: $font-size-base;
+                font-weight: $font-weight-bolder;
+            }
+        }
+    }
+    &__content{
+        padding: 0 15px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    &__title{
+        font-size: $font-size-base;
+        font-weight: $font-weight-bold;
+        color: $dark;
+    }
+    &__text{
+        font-size: $font-size-sm;
+        color: $gray-2;
+        margin-top: 8px;
+    }
+    &__price{
+        font-weight: $font-weight-bold;
+        color: $red;
+        font-size: $font-size-md;
+    }
+    button{
+        @include button(65px, 35px, $gray-1, transparent);
+        border: 1px solid $gray-3;
+        border-radius: 3px;
+        i{
+            margin-bottom: 6px;
+        }
+        &:hover{
+            background-color: $yellow;
+            color: $white;
+            border: 1px solid $yellow;
+        }
+    }
+}

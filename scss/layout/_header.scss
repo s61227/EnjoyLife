@@ -1,0 +1,69 @@
+/* header */
+.l-header{
+    background-color: $bg-primary;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0px 2px 8px 0 rgba(50, 50, 50, 0.08);
+    .row{
+        padding: 30px 0;
+        @include pad(){
+            height: 84px;
+            padding: 0 15px;
+        }
+    }
+    &__menuBar{
+        @include pad(){
+            i{
+                color: $text-primary;
+                font-size: $font-size-md;
+            }
+        }
+    }
+    &__logo{
+        img{
+            height:50px;
+        }
+    }
+}
+nav{
+    a{
+        font-size: $font-size-base;
+        font-weight: $font-weight-bold;
+        padding-left: 60px;
+        @include pad(){
+            border-bottom: 1px solid $gray-4;
+            padding: 15px 0;
+        }
+    }
+    @include pad(){
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        position: absolute;
+        top:84px;
+        right: 0;
+        left: 0;
+        text-align: center;
+        background-color: $bg-primary;
+        opacity: 0.9;
+    }
+}
+nav.js-menuShow{
+    max-height: 200px;
+    display: block;
+    transition: max-height 0.5s;
+}
+.l-banner{
+    padding-top: 100px;
+    margin-bottom: 50px;
+    @include pad(){
+        padding-top: 84px;
+    }
+    img{
+        @include fit-image(100%, 500px);
+        @include pad(){
+            @include fit-image(100%, 277px);
+        }
+    }
+}

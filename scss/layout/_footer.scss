@@ -1,0 +1,46 @@
+/* footer */
+.l-footer{
+    background-color: $bg-secondary;
+    padding: 0 30px;
+    section{
+        padding: 50px 0;
+        @include pad(){
+            padding: 20px 0;
+        }
+        p{
+            margin: 15px 0;
+            color: $text-secondary;
+        }
+    }
+    h3{
+        font-size: $font-size-lg;
+        font-weight: $font-weight-bolder;
+        margin: 20px 0;
+        color: $text-primary;
+    }
+    .container>p{
+        text-align: center;
+        padding: 20px 0;
+        letter-spacing: 1px;
+        color: $text-primary;
+    } 
+    &__mediaIcon{
+        span{
+            margin-right: 5px;
+        }
+        i{
+            font-size: 40px;
+            color: $text-secondary;
+        }
+    }
+    &__email{
+        background-color: $bg-primary;
+        box-sizing: border-box;
+        input{
+            @include input($bg-primary);
+        }
+        button{
+            @include button(50px, 50px, $gray-4, $gray-1);
+        }
+    }
+}

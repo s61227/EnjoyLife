@@ -1,0 +1,27 @@
+/* ======= main - product ======= */
+.p-product{
+    @include pad(){
+        padding: 0 30px;
+    }
+    li{
+        padding: 15px;
+        border-left: 1px solid $gray-3;
+        border-right: 1px solid $gray-3;
+        border-bottom: 1px solid $gray-3;
+        &:first-child{
+            border: 1px solid $blue;
+            padding: 20px 15px;
+            background-color: $blue;
+            color: $white;
+            font-size: $font-size-md;
+            font-weight: $font-weight-bold;
+        }
+        &:not(:first-child):hover{
+            background-color: $gray-3;
+            cursor: pointer;
+        }
+    }
+    &__aside{
+        margin-bottom: 30px;
+    }
+}

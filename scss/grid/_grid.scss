@@ -1,0 +1,21 @@
+/*$susy: (
+  'svg-grid-colors': hsl(180, 50%, 80%),
+  'columns': susy-repeat(12),
+  'gutters': 1/3,
+);
+.col-container {
+  background: susy-svg-grid() no-repeat scroll;
+  max-width: $desktop;
+  margin: 0 auto;
+}
+.col-row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+*/
+
+
+
+
+
